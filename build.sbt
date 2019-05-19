@@ -12,7 +12,7 @@ testFrameworks += new TestFramework("scalaprops.ScalapropsFramework")
 description := "A library that does nothing useful"
 
 import xerial.sbt.Sonatype._
-sonatypeProjectHosting := Some(GitHubHosting("scalacenter", "library-example", "julien.richard-foy@epfl.ch"))
+sonatypeProjectHosting := Some(GitHubHosting(user = "obarros", repository = "library-example", email = "tchubarros@gmail.com"))
 // indicate the open source licenses that apply to our project
 licenses := Seq("APL2" -> url("http://www.apache.org/licenses/LICENSE-2.0.txt"))
 // publish to the Sonatype repository
