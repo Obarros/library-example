@@ -1,0 +1,8 @@
+# artifacts of compilation produced by sbt
+target/
+# secrets
+ci/secring.asc
+ci/travis-key
+ci/secrets.tar
+.idea
+.DS_Store
