@@ -8,7 +8,7 @@ Add the following dependency to your `build.sbt` file:
 
 @@@vars
 ``` scala
-libraryDependencies += "ch.epfl.scala" %% "library-example" % "$project.version$"
+libraryDependencies += "com.obarros" %% "library-example" % "$project.version$"
 ```
 @@@
 

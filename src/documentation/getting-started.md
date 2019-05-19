@@ -3,7 +3,7 @@
 First, start with the following import:
 
 ```tut
-import ch.epfl.scala.Example
+import com.obarros.Example
 ```
 
 Then, do nothing with something:
