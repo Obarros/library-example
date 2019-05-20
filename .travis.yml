@@ -29,7 +29,7 @@ jobs:
       name: "Publish a release"
       script:
         # decrypt PGP secret key and GitHub SSH key
-        - openssl aes-256-cbc -K $encrypted_602f530300eb_key -iv $encrypted_602f530300eb_iv -in ci/secrets.tar.enc -out ci/secrets.tar -d
+        - openssl aes-256-cbc -K $encrypted_f88b79a98885_key -iv $encrypted_f88b79a98885_iv -in ci/secrets.tar.enc -out ci/secrets.tar -d
         - tar xvf ci/secrets.tar
         - chmod 600 ci/travis-key
         - eval "$(ssh-agent -s)"
@@ -45,5 +45,7 @@ env:
   - secure: cYxnRjWS5oTVU77QCtcD1/06NMI0T7RHdyKoX5LMRu1b/cnfN0mQXbbe4ZR6pKE+WMyGtgnE2uUID/MQiTnXWewg2y/TaFx3bp4Z1h/0N2WLwqLn1kwnlqzzQ+qHhCZBUdJz1lDheuPRCYQBS0OcX2/S3yGkgMS0S1RIPsc5cOKOTJC7K6i3AvF74gl+cfEuZo6zC1YB/6SlaUgL/3GQ/3l08dB5V0Fircf6oH99nn9/yHYQ2rIpi/tcY8fX533OtnsQ7BHD+nmi01zAvoUI/WXDLwgWGo6f0e3C/jG9oltcTv/kCW+rhrzFVmXhfoXSGftfA7PtKjEzcIo9huvbebMFPbj6Cx709NziM03zOEUzIQpkpp0EbEgstVG62Ri9tSOipDgerw2/KS+59uNGiIcrACUYPmR93Xh7ZHqFhh1YHBUM9YXrbMdIAru1hKGgi2MKxEgp6K7QyE4hoCRLzdOje+Cvyrr1vfnUazVsI51xB7tPcJouuG7fJqKt9HtD9kHtexjE9/NIFEpjntOK6sUyaa4U6JhNk1nBShwvRnWMmzmg/TvAE9f+99Gmo/XRp2ESEChHxDCizESQ9aPWDb3hGU76BbLg2Nc9sR5XcW7Rw4nAkPR4hj53bU2boTB0Oqzy8pL3o03gqYp9IQOG2niVoq/rUrQqITiHSvUQG5U=
 
 before_install:
+- openssl aes-256-cbc -K $encrypted_f88b79a98885_key -iv $encrypted_f88b79a98885_iv
+  -in ci/secrets.tar.enc -out ci/secrets.tar -d
 - openssl aes-256-cbc -K $encrypted_f88b79a98885_key -iv $encrypted_f88b79a98885_iv
   -in ci/secring.asc.enc -out ci/secring.asc -d
