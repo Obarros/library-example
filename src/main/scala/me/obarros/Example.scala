@@ -1,4 +1,4 @@
-package com.obarros
+package me.obarros
 
 object Example {
 
