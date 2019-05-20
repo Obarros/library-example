@@ -1,4 +1,4 @@
-package com.obarros
+package me.obarros
 
 import scalaprops.{Property, Scalaprops}
 
