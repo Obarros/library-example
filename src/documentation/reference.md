@@ -8,4 +8,4 @@ The `doNothing` function takes anything as parameter and returns it unchanged:
 
 @@snip [Usage.scala]($root$/src/test/scala/com/obarros/Usage.scala) { #do-nothing }
 
-Browse the @scaladoc[API documentation](com.obarros.Example$) for more information.
+Browse the @scaladoc[API documentation](me.obarros.Example$) for more information.
